@@ -12,9 +12,35 @@
     </head>
     <body ng-controller="FotosController">
         <div class="container">
-            <h1 class="text-center">Alurapic</h1>
-            <img src="{{foto.url}}" 
-            alt="{{foto.titulo}}" class="img-responsive center-block"> <!-- usando classe do bootstrap para deixar imagem responsiva(para todos dispositivos) e centralizada -->
+
+            <div class="jumbotron">
+                <h1 class="text-center">Fernando Pic</h1>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{foto.titulo}}</h3>
+                </div>
+                <div class="panel-body">
+                    <img src="{{foto.url}}" alt="{{foto.titulo}}" class="img-reponsive center-block">
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{foto2.titulo}}</h3>
+                </div>
+                <div class="panel-body">
+                    <img src="{{foto2.url}}" alt="{{foto2.titulo}}" class="img-reponsive center-block">
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{foto3.titulo}}</h3>
+                </div>
+                <div class="panel-body">
+                    <img src="{{foto3.url}}" alt="{{foto3.titulo}}" class="img-reponsive center-block">
+                </div>
+            </div>
         </div> <!-- fim container -->        
     </body>
 </html>
