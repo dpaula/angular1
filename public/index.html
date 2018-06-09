@@ -8,12 +8,13 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <script src="js/lib/angular.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/controllers/fotos-controller.js"></script>
     </head>
     <body>
         <div class="container">
             <h1 class="text-center">Alurapic</h1>
-            <img src="http://www.fundosanimais.com/Minis/leoes.jpg" 
-            alt="leão" class="img-responsive center-block"> <!-- usando classe do bootstrap para deixar imagem responsiva(para todos dispositivos) e centralizada -->
+            <img src="{{foto.url}}" 
+            alt="{{foto.titulo}}" class="img-responsive center-block"> <!-- usando classe do bootstrap para deixar imagem responsiva(para todos dispositivos) e centralizada -->
         </div> <!-- fim container -->        
     </body>
 </html>
