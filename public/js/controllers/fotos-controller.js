@@ -4,12 +4,22 @@ angular.module('alurapic').controller('FotosController', function($scope, $http)
     $scope.fotos = [];
 
     //requisição ajax, trazendo do servidor as fotos, usando $http do angular
-    let promisse = $http.get('v1/fotos');
+    /*let promisse = $http.get('v1/fotos');
 
     promisse.then((ret) => {
         $scope.fotos = ret.data;
     }).catch((error) => {
         console.log(error);
     });
- 
+    */
+
+    //usando método success e error já preparado para retornar os dados
+    $http.get('v1/fotos')
+    .success((fotos) =>{
+        $scope.fotos = fotos;
+    })
+    .error((error) =>{
+        console.log(error);
+    });
+
 });
