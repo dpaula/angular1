@@ -2,6 +2,7 @@
 angular.module('alurapic').controller('FotosController', function($scope, $http){//injeção de dependencia, pre requisito $scope para definição do escopo 
 
     $scope.fotos = [];
+    $scope.filtro = '';
 
     //requisição ajax, trazendo do servidor as fotos, usando $http do angular
     /*let promisse = $http.get('v1/fotos');
