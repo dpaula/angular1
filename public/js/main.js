@@ -10,6 +10,11 @@ angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
         templateUrl : 'partials/principal.html',//url do html que será monntado
         controller : 'FotosController'//controller que será associado
     });
+    
+    $routeProvider.when('/fotos/minha-foto', {//segundo parametro é um objeto
+        templateUrl : 'partials/minha-foto.html',//url do html que será monntado
+        controller : 'FotosController'//controller que será associado
+    });
 
     $routeProvider.when('/fotos/new', {
         templateUrl : 'partials/foto.html'
