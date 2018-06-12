@@ -12,4 +12,9 @@ angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
         templateUrl : 'partials/foto.html'
     });
 
+    //caso use uma rota inválida, redireciona para fotos
+    $routeProvider.otherwise({
+        redirectTo : '/fotos'
+    });
+
 });
