@@ -1,5 +1,8 @@
 angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
-.config(function($routeProvider) {// não funciona com arrow function
+.config(function($routeProvider, $locationProvider) {// não funciona com arrow function
+
+    //ativando o html5, para alterar a url base de acesso que por padrão é #
+    $locationProvider.html5Mode(true);
 
     //configuração de rotas
     //primeiro parâmetro é a rota indicada /#/fotos
