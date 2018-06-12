@@ -1,3 +1,4 @@
+/*quando a classe for chamada E tiver deixando */
 .painel-animado.ng-leave-active {
     -moz-transform: scale(0.1);
     -webkit-transform: scale(0.1);

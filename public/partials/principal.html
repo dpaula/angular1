@@ -1,0 +1,17 @@
+<div class="jumbotron">
+    <h1 class="text-center">Fernando Pic</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <input ng-model="filtro" ng-model-options="{debounce: 500}" type="text" class="form-control" placeholder="filtrar">
+    </div>
+    <!-- frim col-md-12 -->
+</div>
+<!-- frim row -->
+
+<div class="row">
+    <meu-painel class="col-md-2 painel-animado" ng-repeat="foto in fotos | filter: filtro" titulo="{{foto.titulo}}">
+        <img src="{{foto.url}}" alt="{{foto.titulo}}" class="img-reponsive center-block">
+    </meu-painel>
+</div>
