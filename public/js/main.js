@@ -8,4 +8,8 @@ angular.module('alurapic', ['minhasDiretivas', 'ngAnimate', 'ngRoute'])
         controller : 'FotosController'//controller que será associado
     });
 
+    $routeProvider.when('/fotos/new', {
+        templateUrl : 'partials/foto.html'
+    });
+
 });
