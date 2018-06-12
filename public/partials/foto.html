@@ -1,5 +1,5 @@
 <div class="page-header text-center">
-    <h1>TÍTULO DA FOTO AQUI</h1>
+    <h1>{{foto.titulo}}</h1>
 </div>
 
 <form name="formulario" class="row">
@@ -7,15 +7,15 @@
 
         <div class="form-group" id="titulo">
             <label for="titulo">Título</label>
-            <input name="titulo" class="form-control">
+            <input ng-model="foto.titulo" name="titulo" class="form-control">
         </div>
         <div class="form-group" id="url">
             <label for="url">URL</label>
-            <input name="url" class="form-control">
+            <input ng-model="foto.url" name="url" class="form-control">
         </div>
         <div class="form-group" id="descricao">
             <label for="descricao">Descrição</label>
-            <input name="descricao" class="form-control">
+            <input ng-model="foto.descricao" name="descricao" class="form-control">
         </div>
 
         <button type="submit" class="btn btn-primary">Salvar</button>
@@ -25,7 +25,7 @@
     </div>
 
     <div class="col-md-6">
-        <minha-foto></minha-foto>
+        <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
     </div>
 
 </form>
