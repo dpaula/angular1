@@ -23,4 +23,9 @@ angular.module('alurapic').controller('FotosController', function($scope, $http)
         console.log(error);
     });
 
+    $scope.remover = (foto) => {
+
+        console.log(foto);
+    };
+
 });
