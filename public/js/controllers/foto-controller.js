@@ -15,18 +15,29 @@ angular.module('alurapic').controller('FotoController', function ($scope, $http,
     }
 
     $scope.submeter = () => { //método chamado na tag do formulário da foto
-        if (!$scope.formulario.$valid) { //valida se o formulário está valido antes de mandar para o backend
-            return;
-        } else {
-            $http.post("v1/fotos", $scope.foto) //envia foto para backend
+
+        if ($scope.foto._id) {
+            $http.put('v1/fotos/' + $scope.foto._id, $scope.foto)
                 .success(() => {
-                    $scope.foto = {}; //lima o scopo
-                    $scope.mensagem = 'Foto cadastrada com sucesso!';
+                    $scope.mensagem = 'Foto alterada com sucesso!';
                 })
                 .error((error) => {
-                    $scope.mensagem = 'Foto não cadastrada!';
+                    console.log(error);
+                    $scope.mensagem = 'Não foi possível alterar a foto';
                 });
+        } else {
+            if (!$scope.formulario.$valid) { //valida se o formulário está valido antes de mandar para o backend
+                return;
+            } else {
+                $http.post("v1/fotos", $scope.foto) //envia foto para backend
+                    .success(() => {
+                        $scope.foto = {}; //lima o scopo
+                        $scope.mensagem = 'Foto cadastrada com sucesso!';
+                    })
+                    .error((error) => {
+                        $scope.mensagem = 'Foto não cadastrada!';
+                    });
+            }
         }
     };
-
 });
