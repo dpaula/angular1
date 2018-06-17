@@ -27,7 +27,9 @@ angular.module('alurapic').controller('FotosController', function($scope, $http)
         
         $http.delete('v1/fotos/'+foto._id)//chama metodo do back end para remoção da ffoto do id
         .success(() => {
-            alert('Foto incluida com sucesso!');
+            const indiceFoto = $scope.fotos.indexOf(foto);//pega o indice da foto
+            $scope.fotos.splice(indiceFoto, 1);//remove a foto da lista
+            alert('Foto Removida com sucesso!');
         })
         .error((error) => {
             console.log(error);
