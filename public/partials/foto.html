@@ -29,7 +29,9 @@
 
         <div class="form-group">
             <label for="grupo">Grupo</label>
-            <select name="grupo" id="grupo" class="form-control" required>
+            <select name="grupo" id="grupo" class="form-control" required
+            ng-controller="GruposController" ng-model="foto.grupo"
+            ng-options="grupo._id as grupo.nome for grupo in grupos">
                 <option value="">Selecione o grupo</option>
             </select>
             <span ng-show="formulario.$submitted && formulario.grupo.$error.required" class="form-control alert-danger">
